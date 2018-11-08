@@ -7,5 +7,50 @@
 	{
         die('Erreur : '.$e->getMessage());
 	}
-	
 ?>
+
+<html>
+<head>
+    <head>
+		&nbsp<title>Dungeons and Dragons Tool</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	</head>
+</head>
+<body>
+	<h2 class="ml-5">Dungeons and Dragons Toolkit <small class="text-muted" >Reset</small></h2>
+	<?php
+	if(isset($_POST['verification']))
+	{
+		$bdd->exec('DELETE FROM armor');
+		$bdd->exec('DELETE FROM charactersheet');
+		$bdd->exec('DELETE FROM inventory');
+		$bdd->exec('DELETE FROM statistics');
+		$bdd->exec('DELETE FROM status');
+		$bdd->exec('DELETE FROM weapon');
+		$bdd->exec('ALTER TABLE armor AUTO_INCREMENT = 1;');
+		$bdd->exec('ALTER TABLE charactersheet AUTO_INCREMENT = 1;');
+		$bdd->exec('ALTER TABLE inventory AUTO_INCREMENT = 1;');
+		$bdd->exec('ALTER TABLE statistics AUTO_INCREMENT = 1;');
+		$bdd->exec('ALTER TABLE status AUTO_INCREMENT = 1;');
+		$bdd->exec('ALTER TABLE weapon AUTO_INCREMENT = 1;');
+
+		header('Location: https://1801534php.azurewebsites.net/projectphp/menu.php');
+		exit();
+	}
+	else
+	{
+		echo 'You must check the checkbox below to confirm your choice.';
+		?><br><br><?php
+	}
+	?>
+	<form action="" method="post">
+		<input type="checkbox" name="verification" id="agree"class=" ml-3"/>
+		<label for="agree">Are you sure ?</label>
+		<br><br>
+		<input type="submit" value="Done" class="btn btn-outline-danger ml-5">
+	</form>
+	
+	<br>
+	<a href="menu.php" ><input type="submit" value="Back to the main menu" class="btn btn-outline-secondary ml-5"></a>
+</body>
+</html>

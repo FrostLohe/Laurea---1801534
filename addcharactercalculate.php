@@ -25,11 +25,16 @@
 ?>
 <html>
 <head>
-    <title>Dungeons and Dragons Tool</title>
+    <head>
+		&nbsp<title>Dungeons and Dragons Tool</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	</head>
 </head>
 <body>	
-	<form action="statcharactercalculate.php" method="post">
-	Enter your character's strength :<br>
+	<h2 class="ml-5">Dungeons and Dragons Toolkit <small class="text-muted" >Add Character</small></h2>
+
+	<form action="statcharactercalculate.php" method="post">	
+		Enter your character's strength :<br>
 		<input type="number" name="strength">
  		<br>
  		<br>

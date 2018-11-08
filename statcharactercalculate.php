@@ -27,9 +27,13 @@
 ?>
 <html>
 <head>
-    <title>Dungeons and Dragons Tool</title>
+    <head>
+		&nbsp<title>Dungeons and Dragons Tool</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	</head>
 </head>
 <body>	
+	<h2 class="ml-5">Dungeons and Dragons Toolkit <small class="text-muted" >Add Character</small></h2>
 	<form action="weaponcalculate.php" method="post">
 		Enter your weapons's name :<br>
 		<input type="text" name="weaponName">
@@ -39,12 +43,12 @@
 		Enter your weapons's statistics :<br>
 		<input type="number" name="statisticValue">
 		<select type="text" name="weaponStatistic">
-			<option value="strength">Strength</option>
-			<option value="dexterity">Dexterity</option>
-			<option value="speed">Speed</option>
-			<option value="constitution">Constitution</option>
-			<option value="intelligence">Intelligence</option>
-			<option value="charisma">Charisma</option>
+			<option value="Strength">Strength</option>
+			<option value="Dexterity">Dexterity</option>
+			<option value="Speed">Speed</option>
+			<option value="Constitution">Constitution</option>
+			<option value="Intelligence">Intelligence</option>
+			<option value="Charisma">Charisma</option>
 		</select>
 		<br>
 		<br>
