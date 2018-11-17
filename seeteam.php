@@ -34,7 +34,7 @@
 		$donnees6 = $reponse6->fetch();
 		$donnees7 = $reponse7->fetch();
 		?>
-		<div class="row ml-2">
+		<div class="row ml-2 mr-2">
 		<div class="col-sm-3">
 		<h4 class="sub-header">Character <span class="badge badge-secondary"><?php echo $donnees2['Name']; ?></span></h4>
 			<table class="table table-bordered">
@@ -149,7 +149,7 @@
 		
 		$reponse4 = $bdd->query("SELECT * FROM armor WHERE ID = $temporaryID");
 		$donnees4 = $reponse4->fetch();?>
-		<div class="ml-3">
+		<div class="ml-3 mr-2">
 		<h4 class="sub-header">Armor <span class="badge badge-secondary"><?php echo $donnees2['Name']; ?></h4>
 			<table class="table table-bordered ml-2">
 				<tbody>
@@ -201,7 +201,7 @@
 		
 		$reponse5 = $bdd->query("SELECT * FROM inventory WHERE ID = $temporaryID");
 		$donnees5 = $reponse5->fetch();?>
-		<div class="ml-3">
+		<div class="ml-3 mr-2">
 		<h4 class="sub-header">Inventory <span class="badge badge-secondary"><?php echo $donnees2['Name']; ?></h4>
 			<table class="table table-bordered ml-2">
 				<tbody>
@@ -221,34 +221,34 @@
 					<tr>
 						<td  class="text-center"><?php echo $donnees5['Money']; ?></td>
 						<td class="text-center"><div class="container">
-						<a href="#" class="text-info" data-toggle="tooltip" data-placement="top" title="<?php echo $donnees4['Item1Description'];?>"><?php echo $donnees4['Item1']; ?></a>
+						<a href="#" class="text-info" data-toggle="tooltip" data-placement="top" title="<?php echo $donnees5['Item1Description'];?>"><?php echo $donnees5['Item1']; ?></a>
 						</div></td>
 						<td class="text-center"><div class="container">
-						<a href="#" class="text-info" data-toggle="tooltip" data-placement="top" title="<?php echo $donnees4['Item2Description'];?>"><?php echo $donnees4['Item2']; ?></a>
+						<a href="#" class="text-info" data-toggle="tooltip" data-placement="top" title="<?php echo $donnees5['Item2Description'];?>"><?php echo $donnees5['Item2']; ?></a>
 						</div></td>
 						<td class="text-center"><div class="container">
-						<a href="#" class="text-info" data-toggle="tooltip" data-placement="top" title="<?php echo $donnees4['Item3Description'];?>"><?php echo $donnees4['Item3']; ?></a>
+						<a href="#" class="text-info" data-toggle="tooltip" data-placement="top" title="<?php echo $donnees5['Item3Description'];?>"><?php echo $donnees5['Item3']; ?></a>
 						</div></td>
 						<td class="text-center"><div class="container">
-						<a href="#" class="text-info" data-toggle="tooltip" data-placement="top" title="<?php echo $donnees4['Item4Description'];?>"><?php echo $donnees4['Item4']; ?></a>
+						<a href="#" class="text-info" data-toggle="tooltip" data-placement="top" title="<?php echo $donnees5['Item4Description'];?>"><?php echo $donnees5['Item4']; ?></a>
 						</div></td>
 						<td class="text-center"><div class="container">
-						<a href="#" class="text-info" data-toggle="tooltip" data-placement="top" title="<?php echo $donnees4['Item5Description'];?>"><?php echo $donnees4['Item5']; ?></a>
+						<a href="#" class="text-info" data-toggle="tooltip" data-placement="top" title="<?php echo $donnees5['Item5Description'];?>"><?php echo $donnees5['Item5']; ?></a>
 						</div></td>
 						<td class="text-center"><div class="container">
-						<a href="#" class="text-info" data-toggle="tooltip" data-placement="top" title="<?php echo $donnees4['Item6Description'];?>"><?php echo $donnees4['Item6']; ?></a>
+						<a href="#" class="text-info" data-toggle="tooltip" data-placement="top" title="<?php echo $donnees5['Item6Description'];?>"><?php echo $donnees5['Item6']; ?></a>
 						</div></td>
 						<td class="text-center"><div class="container">
-						<a href="#" class="text-info" data-toggle="tooltip" data-placement="top" title="<?php echo $donnees4['Item7Description'];?>"><?php echo $donnees4['Item7']; ?></a>
+						<a href="#" class="text-info" data-toggle="tooltip" data-placement="top" title="<?php echo $donnees5['Item7Description'];?>"><?php echo $donnees5['Item7']; ?></a>
 						</div></td>
 						<td class="text-center"><div class="container">
-						<a href="#" class="text-info" data-toggle="tooltip" data-placement="top" title="<?php echo $donnees4['Item8Description'];?>"><?php echo $donnees4['Item8']; ?></a>
+						<a href="#" class="text-info" data-toggle="tooltip" data-placement="top" title="<?php echo $donnees5['Item8Description'];?>"><?php echo $donnees5['Item8']; ?></a>
 						</div></td>
 						<td class="text-center"><div class="container">
-						<a href="#" class="text-info" data-toggle="tooltip" data-placement="top" title="<?php echo $donnees4['Item9Description'];?>"><?php echo $donnees4['Item9']; ?></a>
+						<a href="#" class="text-info" data-toggle="tooltip" data-placement="top" title="<?php echo $donnees5['Item9Description'];?>"><?php echo $donnees5['Item9']; ?></a>
 						</div></td>
 						<td class="text-center"><div class="container">
-						<a href="#" class="text-info" data-toggle="tooltip" data-placement="top" title="<?php echo $donnees4['Item10Description'];?>"><?php echo $donnees4['Item10']; ?></a>
+						<a href="#" class="text-info" data-toggle="tooltip" data-placement="top" title="<?php echo $donnees5['Item10Description'];?>"><?php echo $donnees5['Item10']; ?></a>
 						</div></td>
 					</tr>
 				</tbody>

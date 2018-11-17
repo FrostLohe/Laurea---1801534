@@ -19,5 +19,9 @@
 <body>
 	<h2 class="ml-5">Dungeons and Dragons Toolkit <small class="text-muted" >Upgrade Character</small></h2>
 	
+	
+	<br>
+	<a href="seeteam.php" ><input type="submit" value="Back to the See Team menu" class="btn btn-outline-secondary ml-5"></a>
+	<br><br>
 </body>
 </html>

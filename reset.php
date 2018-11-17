@@ -18,6 +18,7 @@
 </head>
 <body>
 	<h2 class="ml-5">Dungeons and Dragons Toolkit <small class="text-muted" >Reset</small></h2>
+	<div class="ml-3">
 	<?php
 	if(isset($_POST['verification']))
 	{
@@ -39,18 +40,21 @@
 	}
 	else
 	{
-		echo 'You must check the checkbox below to confirm your choice.';
-		?><br><br><?php
+		echo "<br><p>You must check the checkbox below to confirm your choice.</p>";
+		?><br><?php
 	}
 	?>
-	<form action="" method="post">
-		<input type="checkbox" name="verification" id="agree"class=" ml-3"/>
-		<label for="agree">Are you sure ?</label>
+	<form action="" method="post" class='mb-0'>
+		<div class='form-check ml-4'>
+			<input type='checkbox' name='verification' class='form-check-input' id='verification'>
+			<label class='form-check-label' for='verification'>Are you sure ?</label>
+		</div>
 		<br><br>
 		<input type="submit" value="Done" class="btn btn-outline-danger ml-5">
 	</form>
 	
-	<br>
+	<br><br>
 	<a href="menu.php" ><input type="submit" value="Back to the main menu" class="btn btn-outline-secondary ml-5"></a>
+	</div>
 </body>
 </html>

@@ -3,8 +3,6 @@
 	$weaponStatistic = $_POST['weaponStatistic'];
 	$statisticValue = $_POST['statisticValue'];
 	$description = $_POST['description'];
-	$initializationText = '';
-	$initializationNumber = 0;
 		
 	try
 	{

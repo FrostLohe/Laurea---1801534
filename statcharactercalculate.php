@@ -34,32 +34,44 @@
 </head>
 <body>	
 	<h2 class="ml-5">Dungeons and Dragons Toolkit <small class="text-muted" >Add Character</small></h2>
+	<br>
+	<div class='ml-3 mr-3'>
 	<form action="weaponcalculate.php" method="post">
-		Enter your weapons's name :<br>
-		<input type="text" name="weaponName">
- 		<br>
- 		<br>		
-  
-		Enter your weapons's statistics :<br>
-		<input type="number" name="statisticValue">
-		<select type="text" name="weaponStatistic">
-			<option value="Strength">Strength</option>
-			<option value="Dexterity">Dexterity</option>
-			<option value="Speed">Speed</option>
-			<option value="Constitution">Constitution</option>
-			<option value="Intelligence">Intelligence</option>
-			<option value="Charisma">Charisma</option>
-		</select>
-		<br>
-		<br>
-					
-		Enter a weapon's description :<br>
-		<input type="text" name="description">
- 		<br>
- 		<br>
+		<div class="col-sm-6">
+			<label for="weaponName">Enter your weapons's name :</label>
+			<input type="text" name ="weaponName" class="form-control" id="weaponNameID" placeholder="Name" required>
+		</div>
+		<br>	
 		
-		<input type="submit" value="Done">
+		<div class="row ml-2 mr-2">
+			<div class="col-sm-3">
+				<label for="statisticValue">Enter your weapon's statistics :</label>
+				<input type="number" name ="statisticValue" class="form-control" id="statisticValueID" placeholder="Boost" required>
+			</div>
+			<div class="col-sm-3">
+				<label for="weaponStatistic">Choose the armor's type :</label>
+				<select class="form-control" type="text" name="weaponStatistic">
+					<option value="Strength">Strength</option>
+					<option value="Dexterity">Dexterity</option>
+					<option value="Speed">Speed</option>
+					<option value="Constitution">Constitution</option>
+					<option value="Intelligence">Intelligence</option>
+					<option value="Charisma">Charisma</option>
+				</select>
+			</div>
+		</div>
+		<br>
+		
+		<div class="col-sm-6">
+			<label for="description">Enter your weapons's description :</label>
+			<input type="text" name ="description" class="form-control" id="descriptionID" placeholder="Description" required>
+		</div>
+		<br>			
+		<br>
+		
+		<input type="submit" value="Done" class="btn btn-outline-success ml-5">
   		<br>
+		</div>
 	</form>
 </body>
 </html>

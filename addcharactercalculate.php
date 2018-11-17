@@ -32,40 +32,44 @@
 </head>
 <body>	
 	<h2 class="ml-5">Dungeons and Dragons Toolkit <small class="text-muted" >Add Character</small></h2>
-
+	<br>
+	<div class='ml-3 mr-3'>
 	<form action="statcharactercalculate.php" method="post">	
-		Enter your character's strength :<br>
-		<input type="number" name="strength">
- 		<br>
- 		<br>
-  
-  		Enter your character's dexterity :<br>
-		<input type="number" name="dexterity">
- 		<br>
- 		<br>
+		<div class="col-sm-6">
+			<label for="strength">Enter your character's strength :</label>
+			<input type="number" name ="strength" class="form-control" id="strengthID" placeholder="Strength" required>
+		</div>
+		<br>
+		<div class="col-sm-6">
+			<label for="dexterity">Enter your character's dexterity :</label>
+			<input type="number" name ="dexterity" class="form-control" id="dexterityID" placeholder="Dexterity" required>
+		</div>
+		<br>
+		<div class="col-sm-6">
+			<label for="speed">Enter your character's speed :</label>
+			<input type="number" name ="speed" class="form-control" id="speedID" placeholder="Speed" required>
+		</div>
+		<br>
+		<div class="col-sm-6">
+			<label for="constitution">Enter your character's constitution :</label>
+			<input type="number" name ="constitution" class="form-control" id="constitutionID" placeholder="Constitution" required>
+		</div>
+		<br>
+		<div class="col-sm-6">
+			<label for="intelligence">Enter your character's intelligence :</label>
+			<input type="number" name ="intelligence" class="form-control" id="intelligenceID" placeholder="Intelligence" required>
+		</div>
+		<br>
+		<div class="col-sm-6">
+			<label for="charisma">Enter your character's charisma :</label>
+			<input type="number" name ="charisma" class="form-control" id="charismaID" placeholder="Charisma" required>
+		</div>
+		<br>
+		<br>
 		
-		Enter your character's speed :<br>
-		<input type="number" name="speed">
- 		<br>
- 		<br>
-		
-		Enter your character's constitution :<br>
-		<input type="number" name="constitution">
- 		<br>
- 		<br>
-		
-		Enter your character's intelligence :<br>
-		<input type="number" name="intelligence">
- 		<br>
- 		<br>
-		
-		Enter your character's charisma :<br>
-		<input type="number" name="charisma">
- 		<br>
- 		<br>
-		
-		<input type="submit" value="Done">
+		<input type="submit" value="Done" class="btn btn-outline-success ml-5">
   		<br>
 	</form>
+	</div>
 </body>
 </html>

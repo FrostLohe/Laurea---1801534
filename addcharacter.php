@@ -7,39 +7,42 @@
 </head>
 <body>
 	<h2 class="ml-5">Dungeons and Dragons Toolkit <small class="text-muted" >Add Character</small></h2>
-	<form action="addcharactercalculate.php" method="post">
-	Enter your character's name :<br>
-		<input type="text" name="name">
- 		<br>
- 		<br>
-  
-  		Enter your character's race :<br>
-		<input type="text" name="race">
- 		<br>
- 		<br>
-		
-		Enter your character's first class :<br>
-		<input type="text" name="class1">
- 		<br>
- 		<br>
-		
-		Enter your character's second class :<br>
-		<input type="text" name="class2">
- 		<br>
- 		<br>
-		
-		Enter your character's main personality trait :<br>
-		<input type="text" name="personalitytrait">
- 		<br>
- 		<br>
+	<br>
+	<div class='ml-3 mr-3'>
+	<form action="addcharactercalculate.php" method="post" class='mb-0'>
+		<div class="col-sm-6">
+			<label for="name">Enter your character's name :</label>
+			<input type="text" name ="name" class="form-control" id="characterNameID" placeholder="Name" required>
+		</div>
+		<br>
+		<div class="col-sm-6">
+			<label for="race">Enter your character's race :</label>
+			<input type="text" name ="race" class="form-control" id="characterRaceID" placeholder="Race" required>
+		</div>
+		<br>
+		<div class="col-sm-6">
+			<label for="class1">Enter your character's first class :</label>
+			<input type="text" name ="class1" class="form-control" id="characterClass1ID" placeholder="First class" required>
+		</div>
+		<br>
+		<div class="col-sm-6">
+			<label for="class2">Enter your character's second class :</label>
+			<input type="text" name ="class2" class="form-control" id="characterClass2ID" placeholder="Second class" required>
+		</div>
+		<br>
+		<div class="col-sm-6">
+			<label for="personalitytrait">Enter your character's main personality trait :</label>
+			<input type="text" name ="personalitytrait" class="form-control" id="characterPersonalityID" placeholder="Personality" required>
+		</div>
+		<br>
   		
-		<input type="submit" value="Done">
+		<input type="submit" value="Done" class="btn btn-outline-success ml-5">
   		<br>
 	</form>
 	<br><br>
 	<a href="menu.php" ><input type="submit" value="Back to the main menu" class="btn btn-outline-secondary ml-5"></a>
 	<br><br>
-	
+	</div>
 	
 </body>
 </html>

@@ -5,6 +5,13 @@
 	<head>
 		&nbsp<title>Dungeons and Dragons Tool</title>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<style>
+            body
+            {
+                background-position:right bottom;
+				background: white url(detd.png) no-repeat 80% 75%;
+            }
+        </style>
 	</head>
 
 	<body>
@@ -21,7 +28,10 @@
 			&nbsp;
 			<a href="addcharacter.php" ><input type="submit" value="Add Character" class="btn btn-outline-success ml-5"></a>
 			&nbsp;
-			<a href="removecharacter.php" ><input type="submit" value="Remove Character" class="btn btn-outline-warning"></a>
+			<a href="additem.php" ><input type="submit" value="Add Item" class="btn btn-outline-success"></a>
+			<br><br>
+			&nbsp;
+			<a href="removecharacter.php" ><input type="submit" value="Remove Character" class="btn btn-outline-warning ml-5"></a>
 			&nbsp;
 			<a href="manageshop.php" ><input type="submit" value="Manage Shop" class="btn btn-outline-warning"></a>
 			<br><br>
