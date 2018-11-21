@@ -1,3 +1,16 @@
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: register.php");
+    exit;
+}
+?>
+
+
+
 <html>
 <head>
     <head>
@@ -37,8 +50,8 @@
 						<input type="number" name ="statisticValue" min="0" class="form-control" id="statisticValueID" placeholder="Boost" required>
 					</div>
 					<div class="mb-3">
-						<label for="description">Enter the weapon's description :</label>
-						<input type="text" name ="description" class="form-control" id="descriptionID" placeholder="Description" required>
+						<label for="description">Enter the weapon's description (recommanded) :</label>
+						<input type="text" name ="description" class="form-control" id="descriptionID" placeholder="Description">
 					</div>
 					
 					<input type="submit" value="Add Weapon" class="btn btn-success ml-5">
@@ -89,8 +102,8 @@
 						<input type="number" name ="armorValue" min="0" class="form-control" id="armorValueID" placeholder="Boost" required>
 					</div>
 					<div class="mb-3">
-						<label for="description">Enter the armor's description :</label>
-						<input type="text" name ="description" class="form-control" id="descriptionID" placeholder="Description" required>
+						<label for="description">Enter the armor's description (recommanded) :</label>
+						<input type="text" name ="description" class="form-control" id="descriptionID" placeholder="Description">
 					</div>
 					
 					<input type="submit" value="Add Armor" class="btn btn-success ml-5">
@@ -112,8 +125,8 @@
 						<input type="text" name ="itemName" class="form-control" id="itemNameID" placeholder="Name" required>
 					</div>
 					<div class="mb-3">
-						<label for="description">Enter the item's description :</label>
-						<input type="text" name ="description" class="form-control" id="descriptionID" placeholder="Description" required>
+						<label for="description">Enter the item's description (recommanded) :</label>
+						<input type="text" name ="description" class="form-control" id="descriptionID" placeholder="Description">
 					</div>					
 					<input type="submit" value="Add Item" class="btn btn-success ml-5">
 				</form>

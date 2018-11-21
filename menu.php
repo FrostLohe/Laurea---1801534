@@ -1,5 +1,14 @@
 <!DOCTYPE html>
-
+<?php 
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: register.php");
+    exit;
+}
+?>
 <html>
 
 	<head>
@@ -15,7 +24,7 @@
 	</head>
 
 	<body>
-		<h2 class="ml-5">Dungeons and Dragons Toolkit <small class="text-muted" >Main menu</small></h2>
+		<h2 class="ml-5">Dungeons and Dragons Toolkit <small class="text-muted" >Main Menu</small></h2>
 
 
 		<div>
@@ -40,6 +49,9 @@
 			<br><br><br><br>
 			&nbsp;
 			<a href="reset.php" ><input type="submit" value="Reset" class="btn btn-outline-danger ml-5"></a>
+			<br><br>
+			&nbsp;
+			<a href="logout.php" ><input type="submit" value="Log Out" class="btn btn-outline-dark ml-5"></a>
 		</div>
 		
 		

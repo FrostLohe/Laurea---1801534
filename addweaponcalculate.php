@@ -1,4 +1,13 @@
 <?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: register.php");
+    exit;
+}
+
 	$weaponName = $_POST['weaponName'];
 	$weaponStatistic = $_POST['weaponStatistic'];
 	$statisticValue = $_POST['statisticValue'];

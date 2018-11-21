@@ -1,3 +1,14 @@
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: register.php");
+    exit;
+}
+?>
+
 <html>
 
 	<head>
@@ -24,7 +35,7 @@
 				</div>
 				<div class="col-md-3 mb-3">
 					<label for="amountOfDices">Enter the amount of dices you want to throw</label>
-					<input type="number" name="amountOfDices" min="1" value="<?php echo isset($_POST['amountOfDices']) ? $_POST['amountOfDices'] : '' ?>" class="form-control" id="amountOfDices" placeholder="Amount of Dices" required>
+					<input type="number" name="amountOfDices" min="1" max="100" value="<?php echo isset($_POST['amountOfDices']) ? $_POST['amountOfDices'] : '' ?>" class="form-control" id="amountOfDices" placeholder="Amount of Dices" required>
 				</div>
 			</div>
 			<br>

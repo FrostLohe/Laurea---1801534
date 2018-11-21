@@ -1,3 +1,14 @@
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: register.php");
+    exit;
+}
+?>
+
 <html>
 <head>
     <head>
@@ -26,8 +37,8 @@
 		</div>
 		<br>
 		<div class="col-sm-6">
-			<label for="class2">Enter your character's second class :</label>
-			<input type="text" name ="class2" class="form-control" id="characterClass2ID" placeholder="Second class" required>
+			<label for="class2">Enter your character's second class (optional) :</label>
+			<input type="text" name ="class2" class="form-control" id="characterClass2ID" placeholder="Second class">
 		</div>
 		<br>
 		<div class="col-sm-6">

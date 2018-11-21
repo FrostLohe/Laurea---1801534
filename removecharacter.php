@@ -1,3 +1,14 @@
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: register.php");
+    exit;
+}
+?>
+
 <html>
 	<head>
 		&nbsp<title>Dungeons and Dragons Tool</title>
@@ -32,17 +43,22 @@
 			
 			echo "<form action='' method='post' class='mb-0'>";
 			echo "<p>Select the character you want to remove</p>";
-			foreach ($storagearrayName as $value)
+			if(sizeof($storagearrayName) > 0)
 			{
-				echo "<div class='form-check ml-4'>";
-					echo "<input type='checkbox' class='form-check-input' id='Check' name=$value>";
-					echo "<label class='form-check-label' for='Check'>$value</label>";
-				echo "</div>";
-				
-				
-				//echo "<input type='checkbox' name=$value>";
-				//echo "$value <br>";
+				foreach ($storagearrayName as $value)
+				{
+					echo "<div class='form-check ml-4'>";
+						echo "<input type='checkbox' class='form-check-input' id='Check' name=$value>";
+						echo "<label class='form-check-label' for='Check'>$value</label>";
+					echo "</div>";
+				}
 			}
+			else
+			{
+				echo "<br>";
+				echo "<p style='color:#FF0000' class='ml-3'>No character to erase</p>";
+			}
+			
 			echo "<br>";
 			
 			if(isset($_POST['verification']))

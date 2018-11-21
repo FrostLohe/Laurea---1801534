@@ -1,4 +1,13 @@
 <?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: register.php");
+    exit;
+}
+
 	$strength = $_POST['strength'];
 	$dexterity = $_POST['dexterity'];
 	$speed = $_POST['speed'];
@@ -46,7 +55,7 @@
 		<div class="row ml-2 mr-2">
 			<div class="col-sm-3">
 				<label for="statisticValue">Enter your weapon's statistics :</label>
-				<input type="number" name ="statisticValue" class="form-control" id="statisticValueID" placeholder="Boost" required>
+				<input type="number" name ="statisticValue" min="-100" max="100" class="form-control" id="statisticValueID" placeholder="Boost" required>
 			</div>
 			<div class="col-sm-3">
 				<label for="weaponStatistic">Choose the armor's type :</label>
@@ -63,8 +72,8 @@
 		<br>
 		
 		<div class="col-sm-6">
-			<label for="description">Enter your weapons's description :</label>
-			<input type="text" name ="description" class="form-control" id="descriptionID" placeholder="Description" required>
+			<label for="description">Enter your weapons's description (recommanded) :</label>
+			<input type="text" name ="description" class="form-control" id="descriptionID" placeholder="Description">
 		</div>
 		<br>			
 		<br>

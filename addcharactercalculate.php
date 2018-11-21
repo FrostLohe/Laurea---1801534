@@ -1,4 +1,13 @@
 <?php 
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: register.php");
+    exit;
+}
+
 	$name = $_POST['name'];
 	$race = $_POST['race'];
 	$class1 = $_POST['class1'];
@@ -37,32 +46,32 @@
 	<form action="statcharactercalculate.php" method="post">	
 		<div class="col-sm-6">
 			<label for="strength">Enter your character's strength :</label>
-			<input type="number" name ="strength" class="form-control" id="strengthID" placeholder="Strength" required>
+			<input type="number" name ="strength" class="form-control" min="0" max="100" id="strengthID" placeholder="Strength" required>
 		</div>
 		<br>
 		<div class="col-sm-6">
 			<label for="dexterity">Enter your character's dexterity :</label>
-			<input type="number" name ="dexterity" class="form-control" id="dexterityID" placeholder="Dexterity" required>
+			<input type="number" name ="dexterity" class="form-control" min="0" max="100" id="dexterityID" placeholder="Dexterity" required>
 		</div>
 		<br>
 		<div class="col-sm-6">
 			<label for="speed">Enter your character's speed :</label>
-			<input type="number" name ="speed" class="form-control" id="speedID" placeholder="Speed" required>
+			<input type="number" name ="speed" class="form-control" min="0" max="100" id="speedID" placeholder="Speed" required>
 		</div>
 		<br>
 		<div class="col-sm-6">
 			<label for="constitution">Enter your character's constitution :</label>
-			<input type="number" name ="constitution" class="form-control" id="constitutionID" placeholder="Constitution" required>
+			<input type="number" name ="constitution" class="form-control" min="0" max="100" id="constitutionID" placeholder="Constitution" required>
 		</div>
 		<br>
 		<div class="col-sm-6">
 			<label for="intelligence">Enter your character's intelligence :</label>
-			<input type="number" name ="intelligence" class="form-control" id="intelligenceID" placeholder="Intelligence" required>
+			<input type="number" name ="intelligence" class="form-control" min="0" max="100" id="intelligenceID" placeholder="Intelligence" required>
 		</div>
 		<br>
 		<div class="col-sm-6">
 			<label for="charisma">Enter your character's charisma :</label>
-			<input type="number" name ="charisma" class="form-control" id="charismaID" placeholder="Charisma" required>
+			<input type="number" name ="charisma" class="form-control" min="0" max="100" id="charismaID" placeholder="Charisma" required>
 		</div>
 		<br>
 		<br>
