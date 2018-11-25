@@ -31,7 +31,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     } else{
         $password = trim($_POST["password"]);
     }
-    
+	
     // Validate credentials
     if(empty($username_err) && empty($password_err)){
         // Prepare a select statement
@@ -68,19 +68,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         } else{
                             // Display an error message if password is not valid
                             $password_err = "The password you entered was not valid.";
-							header("location: register.php");
                         }
                     }
                 } else{
                     // Display an error message if username doesn't exist
                     $username_err = "No account found with that username.";
-					header("location: register.php");
                 }
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
-				header("location: register.php");
             }
-			header("location: register.php");
         }
         
         // Close statement

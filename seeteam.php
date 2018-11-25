@@ -270,8 +270,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 		
 		?>
-		<a href="updatecharacter.php" ><input type="submit" value="Upgrade <?php echo $temporaryName?>" class="btn btn-outline-warning ml-5"></a>
-		<br><br><br>
+		<form action="updatecharacter.php" method="POST">
+		<input type="hidden" name="name" value="<?php echo $temporaryName?>"/>
+		<input type="hidden" name="id" value="<?php echo $temporaryID?>"/>
+		<input type="submit" value="Upgrade <?php echo $temporaryName?>" class="btn btn-outline-warning ml-5">
+		</form>
+		<br><br>
 		<?php
 	}
 	$reponse->closeCursor();
