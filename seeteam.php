@@ -34,6 +34,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 	$reponse = $bdd->query('SELECT ID, Name FROM charactersheet');
 	while ($donnees = $reponse->fetch())
 	{
+		//Query the data for each table
 		$temporaryID = $donnees['ID'];
 		$temporaryName = $donnees['Name'];
 		$reponse2 = $bdd->query("SELECT * FROM charactersheet WHERE ID = $temporaryID");

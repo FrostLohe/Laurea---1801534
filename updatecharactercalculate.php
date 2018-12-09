@@ -41,7 +41,7 @@ session_start();
 	$itemName = $_POST["itemName"];
 	$itemDescription = $_POST["itemDescription"];
 	
-	
+	//All those if statement are here to check if something as been modified in a way that is truly relevent
 	if($strength != 0 || $dexterity != 0 || $speed != 0 || $constitution != 0 || $intelligence != 0 || $charisma != 0)
 	{
 		$reponse1 = $bdd->query("SELECT * FROM statistics WHERE ID = $id");

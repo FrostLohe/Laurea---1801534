@@ -45,6 +45,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 			echo "<p>Select the character you want to remove</p>";
 			if(sizeof($storagearrayName) > 0)
 			{
+				//Create a checkbox for each character in the db
 				foreach ($storagearrayName as $value)
 				{
 					echo "<div class='form-check ml-4'>";
@@ -63,6 +64,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 			
 			if(isset($_POST['verification']))
 			{
+				//The token is here to check if something is erased to refresh the page if needed
 				$token = 0;
 				foreach ($storagearrayID as $value2)
 				{
@@ -70,6 +72,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 					++$token;
 					if (isset($_POST[$temporaryName]))
 					{
+						//Erase the checked character
 						$commande1 = $bdd->prepare('DELETE FROM armor WHERE ID =:id');
 						$commande1->execute(array('id'=>$value2));
 						$commande2 = $bdd->prepare('DELETE FROM charactersheet WHERE ID =:id');
@@ -93,6 +96,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 			}
 			else
 			{
+				//Error handling
 				echo 'You must check the checkbox below to confirm your choice.';
 				?><br><br><?php
 			}

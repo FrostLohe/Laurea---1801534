@@ -24,6 +24,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         die('Erreur : '.$e->getMessage());
 	}
 	
+	//Preparation of the SQL request using variables
 	$request = $bdd->prepare('INSERT INTO bankarmor(ArmorType, ArmorName, ArmorStats, ArmorValue, ArmorDescription) VALUES (:armorType, :armorName, :armorStatistic, :armorValue, :description)');
 	$request->execute(array(
 	'armorType' => $armorType,

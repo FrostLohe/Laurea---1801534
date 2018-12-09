@@ -47,6 +47,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 		$diceValue = $_POST['diceValue'];
 		$amountOfDices = $_POST['amountOfDices'];
 		?><br><?php
+		//Basic random generator
 		for ($i = 0; $i < $amountOfDices; $i++ )
 		{
 			?><dice class="ml-5"><?php echo rand(1, $diceValue); ?></dice>

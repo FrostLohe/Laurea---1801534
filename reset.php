@@ -31,6 +31,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 	<?php
 	if(isset($_POST['verification']))
 	{
+		//Delete all the tables
 		$bdd->exec('DELETE FROM armor');
 		$bdd->exec('DELETE FROM charactersheet');
 		$bdd->exec('DELETE FROM inventory');
@@ -44,11 +45,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 		$bdd->exec('ALTER TABLE status AUTO_INCREMENT = 1;');
 		$bdd->exec('ALTER TABLE weapon AUTO_INCREMENT = 1;');
 
+		//Redirect the user to the menu
 		header('Location: https://1801534php.azurewebsites.net/projectphp/menu.php');
 		exit();
 	}
 	else
 	{
+		//Error handling
 		echo "<br><p>You must check the checkbox below to confirm your choice.</p>";
 		?><br><?php
 	}
